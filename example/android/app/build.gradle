@@ -29,7 +29,16 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.kasem.receive_sharing_intent_example"
-    compileSdkVersion 34
+    compileSdk 34
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
